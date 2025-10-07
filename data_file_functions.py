@@ -86,7 +86,7 @@ def sorting():
         except EOFError:
             f.close()
             break
-    print (whole)
+    
     f.close()
     for i in range(len (whole)):
         for j in range(i+1,len(whole)):
@@ -105,12 +105,19 @@ def sorting():
 def menu():
     while True:
         print('enter write to enter new data')
+        time.sleep(0.2)
         print('enter read to view data')
+        time.sleep(0.2)
         print('enter search to search record')
+        time.sleep(0.2)
         print('enter add to add record')
+        time.sleep(0.2)
         print('enter sort to sort the records')
+        time.sleep(0.2)
         print('enter delete to delete a record')
+        time.sleep(0.2)
         print('enter quit to exit')
+        time.sleep(0.2)
         print()
         choice=input('enter choice: ')
         if choice.lower()=='read':
@@ -118,19 +125,19 @@ def menu():
             
         elif choice.lower()=='write':
             filecreate()
-            time.sleep(1)
+            time.sleep(0.5)
         elif choice.lower()=='search':
             searching()
-            time.sleep(1)
+            time.sleep(0.5)
         elif choice.lower()=='add':
             adding()
-            time.sleep(1)
+            time.sleep(0.5)
         elif choice.lower()=='delete':
             deleting()
-            time.sleep(1)
+            time.sleep(0.5)
         elif choice.lower()=='sort':
             sorting()
-            time.sleep(1)
+            time.sleep(0.5)
         elif choice.lower()=='quit':
             print('program ended')
             time.sleep(1)
@@ -141,5 +148,7 @@ def menu():
             print()
         
         time.sleep(1)
+        print()
+        print()
 
 menu()
